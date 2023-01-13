@@ -2,10 +2,28 @@
 import axios from 'axios';
 import AppHeader from './components/AppHeader.vue';
 import CharactersList from './components/CharactersList.vue';
+
+import { store } from './store.js'
+
 export default {
   components:{
     AppHeader,
-    CharactersList
+    CharactersList,
+  },
+  data(){
+    return{
+      store
+    }
+  },
+  created(){
+    this.getCharacters();
+  },
+  methods:{
+    getCharacters(){
+      axios.get(store.url).then((response) => {
+        store.CharactersList = response.data.data
+      })
+    }
   }
 }
 </script>
@@ -18,5 +36,5 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-  @use './styles/generals.scss' as *;
+  @use './styles/general.scss' as *;
 </style>
