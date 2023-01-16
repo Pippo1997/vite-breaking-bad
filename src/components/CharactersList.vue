@@ -14,13 +14,16 @@ export default {
 }
 </script>
 <template lang="">
-  <div class="container mt-5">
+  <main class="container mt-5 bg-white">
     <div class="row">
-      <div class="col-12">
-        <CharactersCard v-for="(item, index) in store.CharactersList" :key="index" :characters="item" />
+      <div class="col-12 bg-black">
+        <p class="text-light p-3">Carte trovate</p>
       </div>
     </div>
-  </div>
+    <div class="row">
+        <CharactersCard v-for="(item, index) in store.CharactersList" :key="index" :characters="item" />
+    </div>
+  </main>
 </template>
 
 <style lang="scss">

@@ -9,8 +9,8 @@ export default {
 <header>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-12">
-        <h4>Yu-Gi-Ho</h4>
+      <div class="col-12 mt-4">
+        <h4>Yu-Gi-Ho Api</h4>
       </div>
     </div>
   </div>
@@ -19,5 +19,8 @@ export default {
 </template>
 
 <style lang="scss">
-  
+  header{
+    height: 75px;
+    background-color: white;
+  }
 </style>
