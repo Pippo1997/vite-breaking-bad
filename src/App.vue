@@ -35,6 +35,6 @@ export default {
   </div>
 </template>
 
-<style lang="scss" scoped>
-  @use './styles/general.scss' as *;
+<style lang="scss">
+  @use './styles/generals.scss' as *;
 </style>
