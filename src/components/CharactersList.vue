@@ -15,8 +15,10 @@ export default {
 </script>
 <template lang="">
   <div class="container mt-5">
-    <div class="d-flex justify-content-between flex-wrap">
+    <div class="row">
+      <div class="col-12">
         <CharactersCard v-for="(item, index) in store.CharactersList" :key="index" :characters="item" />
+      </div>
     </div>
   </div>
 </template>

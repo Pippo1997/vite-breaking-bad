@@ -3,11 +3,21 @@ export default {
   
 }
 </script>
+
 <template lang="">
-  <div>
-    
+
+<header>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <h4>Yu-Gi-Ho</h4>
+      </div>
+    </div>
   </div>
+</header>
+
 </template>
-<style lang="">
+
+<style lang="scss" scoped>
   
 </style>
