@@ -16,8 +16,8 @@ export default {
 <template lang="">
   <main class="container mt-5 bg-white">
     <div class="row">
-      <div class="col-12 bg-black">
-        <p class="text-light p-3">Carte trovate</p>
+      <div class="col-12 bg-black text-light p-3">
+        Carte trovate
       </div>
     </div>
     <div class="row">
