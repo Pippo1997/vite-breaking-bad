@@ -1,7 +1,7 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
 import CharactersList from './components/CharactersList.vue';
-import AppMainVue from './components/AppMain.vue';
+import AppFilter from './components/AppFilter.vue';
 
 import { store } from './store.js'
 import axios from 'axios';
@@ -10,7 +10,7 @@ export default {
   components:{
     AppHeader,
     CharactersList,
-    AppMainVue,
+    AppFilter,
   },
   data(){
     return{
@@ -22,8 +22,10 @@ export default {
   },
   methods:{
     getCharacters(){
-      axios.get(store.url).then((response) => {
-        store.CharactersList = response.data.data.slice(0, 25);
+      let MyUrl = `${store.url}${store.selectedGenere}`;
+
+      axios.get(MyUrl).then((response) => {
+        store.CharactersList = response.data.data;
       })
     }
   }
@@ -32,9 +34,9 @@ export default {
 
 <template lang="">
   <div>
-    <AppHeader/>
-    <AppMain />
-    <CharactersList/>
+    <AppHeader />
+    <AppFilter @filter="getCharacters"/>
+    <CharactersList />
   </div>
 </template>
 
